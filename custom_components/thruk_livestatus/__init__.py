@@ -1,0 +1,1 @@
+"""Thruk Livestatus sensor"""

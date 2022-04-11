@@ -1,0 +1,12 @@
+{
+    "domain": "thruk_livestatus",
+    "name": "Thruk Livestatus",
+    "version": "0.1.0",
+    "documentation": "https://github.com/KevSex/home-assistant-thruk-livestatus",
+    "issue_tracker": "https://github.com/KevSex/home-assistant-thruk-livestatus/issues",
+    "requirements": [],
+    "dependencies": [],
+    "codeowners": [
+        "@KevSex"
+    ]
+}
