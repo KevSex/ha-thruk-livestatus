@@ -1,15 +1,11 @@
 [![GitHub Release][releases-shield]][releases]
 [![GitHub Activity][commits-shield]][commits]
-[![License][license-shield]][license]
 
 [![hacs][hacsbadge]][hacs]
-[![Project Maintenance][maintenance-shield]][user_profile]
 [![BuyMeCoffee][buymecoffeebadge]][buymecoffee]
 
 [![Discord][discord-shield]][discord]
 [![Community Forum][forum-shield]][forum]
-
-_Component to integrate with [thruk-livestatus][thruk-livestatus]._
 
 **This component will set up the following platforms.**
 
@@ -22,13 +18,12 @@ Platform | Description
 
 1. Click install.
 2. In the HA `configuration.yaml` file, add the below lines replacing the name, host and api_key parameters as required.
-```
+
 sensor:
   - platform: thruk_livestatus
     name: Friendly Name
     host: http[s]://FQDN
     api_key: xxxxxx
-```
 
 {% endif %}
 
