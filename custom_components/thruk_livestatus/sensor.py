@@ -5,8 +5,9 @@ configuration.yaml
 
 sensor:
  - platform: thruk_livestatus
-    host: http[s]://FQDN
-    api_key: xxxxxx
+   name: Friendly name
+   host: http[s]://FQDN
+   api_key: xxxxxx
 
 """
 
