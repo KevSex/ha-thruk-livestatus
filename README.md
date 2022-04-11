@@ -5,21 +5,16 @@
 [![License][license-shield]](LICENSE)
 
 [![hacs][hacsbadge]][hacs]
-![Project Maintenance][maintenance-shield]
 [![BuyMeCoffee][buymecoffeebadge]][buymecoffee]
 
 [![Discord][discord-shield]][discord]
 [![Community Forum][forum-shield]][forum]
 
-_Component to integrate with [ha-thruk-livestatus][ha-thruk-livestatus]._
-
 **This component will set up the following platforms.**
 
 Platform | Description
 -- | --
-`sensor` | Show info from blueprint API.
-
-![example][exampleimg]
+`sensor` | Show info from Livestatus API.
 
 ## Installation
 
@@ -29,7 +24,14 @@ Platform | Description
 4. Download _all_ the files from the `custom_components/thruk_livestatus/` directory (folder) in this repository.
 5. Place the files you downloaded in the new directory (folder) you created.
 6. Restart Home Assistant
-7. In the HA UI go to "Configuration" -> "Integrations" click "+" and search for "Integration blueprint"
+8. In the HA `configuration.yaml` file, add the below lines replacing the name, host and api_key parameters as required"
+```
+sensor:
+  - platform: thruk_livestatus
+    name: Friendly Name
+    host: http[s]://FQDN
+    api_key: xxxxxx
+```
 
 Using your HA configuration directory (folder) as a starting point you should now also have this:
 
@@ -40,7 +42,6 @@ custom_components/thruk_livestatus/manifest.json
 custom_components/thruk_livestatus/sensor.py
 ```
 
-## Configuration is done in the UI
 
 <!---->
 
@@ -54,15 +55,13 @@ If you want to contribute to this please read the [Contribution guidelines](CONT
 [buymecoffee]: https://www.buymeacoffee.com/bmac2
 [buymecoffeebadge]: https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg?style=for-the-badge
 [commits-shield]: https://img.shields.io/github/commit-activity/y/custom-components/blueprint.svg?style=for-the-badge
-[commits]: https://github.com/custom-components/integration_blueprint/commits/master
+[commits]: https://github.com/KevSex/ha-thruk-livestatus/commits/master
 [hacs]: https://github.com/custom-components/hacs
 [hacsbadge]: https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge
 [discord]: https://discord.gg/Qa5fW2R
 [discord-shield]: https://img.shields.io/discord/330944238910963714.svg?style=for-the-badge
-[exampleimg]: example.png
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg?style=for-the-badge
 [forum]: https://community.home-assistant.io/
 [license-shield]: https://img.shields.io/github/license/custom-components/blueprint.svg?style=for-the-badge
-[maintenance-shield]: https://img.shields.io/badge/maintainer-Joakim%20Sørensen%20%40ludeeus-blue.svg?style=for-the-badge
 [releases-shield]: https://img.shields.io/github/release/custom-components/blueprint.svg?style=for-the-badge
 [releases]: https://github.com/KevSex/ha-thruk-livestatus/releases
