@@ -176,6 +176,12 @@ class ThrukLivestatusStatusSensor(Entity):
                             self._attributes[HOSTS_DOWN] = state["count"]
                         else:
                             self._attributes[HOSTS_UNKNOWN] = state["count"]
+                    if not HOSTS_UP in self._attributes:
+                        self._attributes[HOSTS_UP] = 0
+                    if not HOSTS_DOWN in self._attributes:
+                        self._attributes[HOSTS_DOWN] = 0
+                    if not HOSTS_UNKNOWN in self._attributes:
+                        self._attributes[HOSTS_UNKNOWN] = 0
         else:
             self._state = "Offline"
             _LOGGER.debug("State: %s", self._state)
