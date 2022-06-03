@@ -1,8 +1,3 @@
 {
-    "name": "Thruk Livestatus",
-    "hacs": "1.6.0",
-    "domains": [
-        "sensor"
-    ],
-    "homeassistant": "0.118.0"
+    "name": "Thruk Livestatus"
 }
